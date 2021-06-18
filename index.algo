@@ -1,0 +1,39 @@
+ALGORITHM phrase
+//déclaration des variables
+VAR
+   ch : STRING; //la phrase
+   nb_characters: INTEGER :=0; //compteur qui indique la longueur de chaîne  //i
+   nb_words : INTEGER := 0; // compteur qui indique le nbr des mots
+   nb_vowels : INTEGER := 0; // compteur qui indique le nbr des voyelles 
+
+BEGIN
+
+//saisie de chaine
+REPEAT
+    Read(ch);
+UNTIL (str(ch.length())='.'  //je sais pas si il ya une fonction predéfinie de str et lenght aux algorithme
+
+//incrimentation de compteur (i)
+nb_characters :=nb_characters + 1;
+
+//indication si il ya des voyelles dans la chaine
+    WHILE (phrase[nb_characters] <> '.') DO
+        IF (uppercase(phrase[nb_characters])='A') OR (uppercase(phrase[nb_characters])='E') 
+            OR (uppercase(phrase[nb_characters])='I') OR (uppercase(phrase[nb_characters])='O') 
+            OR (uppercase(phrase[nb_characters])='U') OR (uppercase(phrase[nb_characters])='Y') THEN
+            nb_vowels := nb_voyelles + 1 ;
+        END_IF
+
+//nbr des mots
+        IF (phrase[nb_characters] = ' ') THEN
+            nb_words := nb_words + 1;
+        END_IF
+//nbr de caractéres
+        nb_characters := nb_characters + 1;
+    END_WHILE
+
+//affichage
+     Write('length of the sentence = ',nb_characters);
+     Write('number of words  = ',nb_words);
+     Write('number of vowels = ',nb_vowels);
+END.
