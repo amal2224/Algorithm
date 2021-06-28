@@ -15,16 +15,16 @@ BEGIN
 nb_characters :=nb_characters + 1;
 
 //indication si il ya des voyelles dans la chaine
-    WHILE (phrase[nb_characters] <> '.') DO
-        IF (uppercase(phrase[nb_characters])='A') OR (uppercase(phrase[nb_characters])='E') 
-            OR (uppercase(phrase[nb_characters])='I') OR (uppercase(phrase[nb_characters])='O') 
-            OR (uppercase(phrase[nb_characters])='U') OR (uppercase(phrase[nb_characters])='Y') THEN
+    WHILE (ch <> '.') DO
+        IF (uppercase(ch)='A') OR (uppercase(ch)='E') 
+            OR (uppercase(ch)='I') OR (uppercase(ch)='O') 
+            OR (uppercase(ch)='U') OR (uppercase(ch)='Y') THEN
             
             nb_vowels := nb_voyelles + 1 ;
         END_IF
 
 //nbr des mots
-        IF (phrase[nb_characters] = ' ') THEN
+        IF (ch = ' ') THEN
             nb_words := nb_words + 1;
         END_IF
 //nbr de caractéres
